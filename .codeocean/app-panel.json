@@ -1,0 +1,347 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"general": {
+		"title": "MOSuite-normalize",
+		"instructions": "normalize counts in a multiOmicsDataSet"
+	},
+	"datasets": [
+		{
+			"id": "814a1cc1-fc40-40d7-a035-b819c160b8b1",
+			"name": "multiOmicDataSet"
+		}
+	],
+	"categories": [
+		{
+			"id": "gDLmTU36PrmD13RK",
+			"name": "Input Data Parameters",
+			"description": "Options for defining input data",
+			"icon": "📁"
+		},
+		{
+			"id": "gn9FXwemlVazWQIo",
+			"name": "Basic",
+			"icon": "📂"
+		},
+		{
+			"id": "XqgPq28Eo5VCFSZu",
+			"name": "Advanced",
+			"description": "Advanced parameters",
+			"icon": "📂"
+		},
+		{
+			"id": "uQ7pLsNmVtR2cX9b",
+			"name": "Visualization",
+			"description": "Visualization and plotting options",
+			"icon": "📊"
+		}
+	],
+	"parameters": [
+		{
+			"id": "vErI4n2A3SVqtFPz",
+			"category": "gDLmTU36PrmD13RK",
+			"name": "multiOmicDataSet file pattern",
+			"param_name": "regex_moo",
+			"description": "Regular expression pattern to match a multiOmicDataset RDS file in data/",
+			"type": "text",
+			"value_type": "string",
+			"default_value": ".*\\.rds$"
+		},
+		{
+			"id": "UA4GuIpVAxdcmHAG",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Count type",
+			"param_name": "count_type",
+			"description": "Type of counts to normalize. Must be a count type in names(moo@counts)",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "filt"
+		},
+		{
+			"id": "vA3pMmQwKs8nZx1c",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Normalization type",
+			"param_name": "norm_type",
+			"description": "Normalization type (default: voom)",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "voom"
+		},
+		{
+			"id": "vB4qNnRxLt9oAy2d",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Group column name",
+			"param_name": "group_colname",
+			"description": "Column from sample metadata containing sample group information (e.g. treatment, phenotype)",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "vC5rOoSyMu0pBz3e",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Input already log2",
+			"param_name": "input_in_log_counts",
+			"description": "Set TRUE if counts are already log2-transformed",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "FALSE",
+			"pattern": "TRUE|FALSE|T|F"
+		},
+		{
+			"id": "vD6sPpTzNv1qCw4f",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Voom normalization method",
+			"param_name": "voom_normalization_method",
+			"description": "Normalization method for limma::voom",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "quantile"
+		},
+		{
+			"id": "vE7tQqUaOw2rDx5g",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Feature ID column name",
+			"param_name": "feature_id_colname",
+			"description": "Column from the counts data containing Feature IDs",
+			"help_text": "Leave blank to use the first column in the counts matrix by default",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vF8uRrVbPx3sEy6h",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Sample ID column name",
+			"param_name": "sample_id_colname",
+			"description": "Column from the sample metadata containing sample names",
+			"help_text": "Leave blank to use the first column in the sample metadata by default",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vG9vSsWcQy4tFz7i",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Label column name",
+			"param_name": "label_colname",
+			"description": "Column from sample metadata containing labels for plots",
+			"help_text": "Leave blank to use the sample ID column",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vH0wTtXdRz5uGa8j",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Samples to include",
+			"param_name": "samples_to_include",
+			"description": "Comma-separated list of samples to include",
+			"help_text": "Leave blank to include all samples",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vI1xUuYeSa6vHb9k",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Samples to rename",
+			"param_name": "samples_to_rename",
+			"description": "Sample renaming pairs: old_name:new_name",
+			"help_text": "Separate multiple pairs with commas",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vJ2yVvZfTb7wIc0l",
+			"category": "XqgPq28Eo5VCFSZu",
+			"name": "Colors for plots",
+			"param_name": "colors_for_plots",
+			"description": "Comma-separated list of colors for PCA and histogram",
+			"help_text": "Use color names or hex codes. Leave blank to use defaults",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vK3zWwAgUc8xJd1m",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Add labels to PCA",
+			"param_name": "add_label_to_pca",
+			"description": "Label points on the PCA plot",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "TRUE",
+			"pattern": "TRUE|FALSE|T|F"
+		},
+		{
+			"id": "vL4aXxBhVd9yKe2n",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "PCA component on x-axis",
+			"param_name": "principal_component_on_x_axis",
+			"description": "Principal component to plot on the x-axis",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "1"
+		},
+		{
+			"id": "vM5bYyCiWe0zLf3o",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "PCA component on y-axis",
+			"param_name": "principal_component_on_y_axis",
+			"description": "Principal component to plot on the y-axis",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "2"
+		},
+		{
+			"id": "vN6cZzDjXf1aMg4p",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Legend position for PCA",
+			"param_name": "legend_position_for_pca",
+			"description": "Legend position for the PCA plot",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "top"
+		},
+		{
+			"id": "vO7dAaEkYg2bNh5q",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Label offset x",
+			"param_name": "label_offset_x_",
+			"description": "Label offset x for the PCA plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "2"
+		},
+		{
+			"id": "vP8eBbFlZh3cOi6r",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Label offset y",
+			"param_name": "label_offset_y_",
+			"description": "Label offset y for the PCA plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "2"
+		},
+		{
+			"id": "vQ9fCcGmAi4dPj7s",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Label font size",
+			"param_name": "label_font_size",
+			"description": "Label font size for the PCA plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "3"
+		},
+		{
+			"id": "vR0gDdHnBj5eQk8t",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Point size for PCA",
+			"param_name": "point_size_for_pca",
+			"description": "Point size for the PCA plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "8"
+		},
+		{
+			"id": "vS1hEeIoCk6fRl9u",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Color histogram by group",
+			"param_name": "color_histogram_by_group",
+			"description": "Color histogram by group instead of sample",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "TRUE",
+			"pattern": "TRUE|FALSE|T|F"
+		},
+		{
+			"id": "vT2iFfJpDl7gSm0v",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Set histogram x-axis min/max",
+			"param_name": "set_min_max_for_x_axis_for_histogram",
+			"description": "Set min/max value for histogram x-axis",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "FALSE",
+			"pattern": "TRUE|FALSE|T|F"
+		},
+		{
+			"id": "vU3jGgKqEm8hTn1w",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Histogram x-axis minimum",
+			"param_name": "minimum_for_x_axis_for_histogram",
+			"description": "x-axis minimum for histogram plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "-1"
+		},
+		{
+			"id": "vV4kHhLrFn9iUo2x",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Histogram x-axis maximum",
+			"param_name": "maximum_for_x_axis_for_histogram",
+			"description": "x-axis maximum for histogram plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "1"
+		},
+		{
+			"id": "vW5lIiMsGo0jVp3y",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Legend font size for histogram",
+			"param_name": "legend_font_size_for_histogram",
+			"description": "Legend font size for histogram plot",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "10"
+		},
+		{
+			"id": "vX6mJjNtHp1kWq4z",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Legend position for histogram",
+			"param_name": "legend_position_for_histogram",
+			"description": "Legend position for histogram plot",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "top"
+		},
+		{
+			"id": "vY7nKkOuIq2lXr5a",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Histogram legend columns",
+			"param_name": "number_of_histogram_legend_columns",
+			"description": "Number of columns for the histogram legend",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "6"
+		},
+		{
+			"id": "vZ8oLlPvJr3mYs6b",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Plot correlation heatmap",
+			"param_name": "plot_corr_matrix_heatmap",
+			"description": "Create a correlation matrix heatmap for sample similarity",
+			"help_text": "Set to FALSE for datasets with many samples to avoid long run times",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "TRUE",
+			"pattern": "TRUE|FALSE|T|F"
+		},
+		{
+			"id": "wA9pMmQwKs4nZt7c",
+			"category": "uQ7pLsNmVtR2cX9b",
+			"name": "Interactive plots",
+			"param_name": "interactive_plots",
+			"description": "Create interactive plots with plotly (PCA and histogram)",
+			"help_text": "Interactive plots allow hovering to view sample information, but correlation heatmap will not display",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "FALSE",
+			"pattern": "TRUE|FALSE|T|F"
+		}
+	],
+	"results": [
+		{
+			"file_name": "moo/moo.rds"
+		},
+		{
+			"file_name": "figures/norm/"
+		}
+	]
+}
