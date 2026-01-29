@@ -2,8 +2,8 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "814a1cc1-fc40-40d7-a035-b819c160b8b1",
-			"mount": "moo-raw"
+			"id": "ca9bcc27-3bdf-4500-be66-a11d06d5d3fa",
+			"mount": "moo-filter"
 		}
 	]
 }

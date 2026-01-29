@@ -7,7 +7,7 @@
 	},
 	"datasets": [
 		{
-			"id": "814a1cc1-fc40-40d7-a035-b819c160b8b1",
+			"id": "ca9bcc27-3bdf-4500-be66-a11d06d5d3fa",
 			"name": "multiOmicDataSet"
 		}
 	],
@@ -338,10 +338,13 @@
 	],
 	"results": [
 		{
-			"file_name": "moo/moo.rds"
+			"file_name": "figures/norm/voom/corr_heatmap.png"
 		},
 		{
-			"file_name": "figures/norm/"
+			"file_name": "figures/norm/voom/histogram.png"
+		},
+		{
+			"file_name": "figures/norm/voom/pca.png"
 		}
 	]
 }
