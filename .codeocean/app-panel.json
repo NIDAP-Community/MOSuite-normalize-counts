@@ -338,10 +338,13 @@
 	],
 	"results": [
 		{
-			"file_name": "moo/moo.rds"
+			"file_name": "figures/norm/voom/corr_heatmap.png"
 		},
 		{
-			"file_name": "figures/norm/"
+			"file_name": "figures/norm/voom/histogram.png"
+		},
+		{
+			"file_name": "figures/norm/voom/pca.png"
 		}
 	]
 }
