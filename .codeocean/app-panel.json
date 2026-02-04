@@ -49,7 +49,7 @@
 		},
 		{
 			"id": "UA4GuIpVAxdcmHAG",
-			"category": "gn9FXwemlVazWQIo",
+			"category": "XqgPq28Eo5VCFSZu",
 			"name": "Count type",
 			"param_name": "count_type",
 			"description": "Type of counts to normalize. Must be a count type in names(moo@counts)",
