@@ -16,36 +16,41 @@
 			"id": "gDLmTU36PrmD13RK",
 			"name": "Input Data Parameters",
 			"description": "Options for defining input data",
-			"icon": "📁"
+			"icon": "\ud83d\udcc1"
 		},
 		{
 			"id": "gn9FXwemlVazWQIo",
 			"name": "Basic",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		},
 		{
 			"id": "XqgPq28Eo5VCFSZu",
 			"name": "Advanced",
 			"description": "Advanced parameters",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		},
 		{
 			"id": "uQ7pLsNmVtR2cX9b",
 			"name": "Visualization",
 			"description": "Visualization and plotting options",
-			"icon": "📊"
+			"icon": "\ud83d\udcca"
 		}
 	],
 	"parameters": [
 		{
 			"id": "UA4GuIpVAxdcmHAG",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "gn9FXwemlVazWQIo",
 			"name": "Count type",
 			"param_name": "count_type",
 			"description": "Type of counts to normalize. Must be a count type in names(moo@counts)",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "filt"
+			"default_value": "filt",
+			"extra_data": [
+				"raw",
+				"clean",
+				"filt"
+			]
 		},
 		{
 			"id": "vA3pMmQwKs8nZx1c",
