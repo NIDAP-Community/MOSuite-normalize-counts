@@ -205,9 +205,15 @@
 			"name": "Legend position for PCA",
 			"param_name": "legend_position_for_pca",
 			"description": "Legend position for the PCA plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "top"
+			"default_value": "top",
+			"extra_data": [
+				"top",
+				"bottom",
+				"left",
+				"right"
+			]
 		},
 		{
 			"id": "vO7dAaEkYg2bNh5q",
@@ -313,9 +319,15 @@
 			"name": "Legend position for histogram",
 			"param_name": "legend_position_for_histogram",
 			"description": "Legend position for histogram plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "top"
+			"default_value": "top",
+			"extra_data": [
+				"top",
+				"bottom",
+				"left",
+				"right"
+			]
 		},
 		{
 			"id": "vY7nKkOuIq2lXr5a",
