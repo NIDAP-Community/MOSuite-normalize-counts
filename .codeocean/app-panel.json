@@ -95,9 +95,15 @@
 			"name": "Voom normalization method",
 			"param_name": "voom_normalization_method",
 			"description": "Normalization method for limma::voom",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "quantile"
+			"default_value": "quantile",
+			"extra_data": [
+				"none",
+				"scale",
+				"quantile",
+				"cyclicloess"
+			]
 		},
 		{
 			"id": "vE7tQqUaOw2rDx5g",
