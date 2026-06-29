@@ -58,9 +58,12 @@
 			"name": "Normalization type",
 			"param_name": "norm_type",
 			"description": "Normalization type (default: voom)",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "voom"
+			"default_value": "voom",
+			"extra_data": [
+				"voom"
+			]
 		},
 		{
 			"id": "vB4qNnRxLt9oAy2d",
