@@ -73,10 +73,13 @@
 			"name": "Input already log2",
 			"param_name": "input_in_log_counts",
 			"description": "Set TRUE if counts are already log2-transformed",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vD6sPpTzNv1qCw4f",
@@ -154,10 +157,13 @@
 			"name": "Add labels to PCA",
 			"param_name": "add_label_to_pca",
 			"description": "Label points on the PCA plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vL4aXxBhVd9yKe2n",
@@ -235,10 +241,13 @@
 			"name": "Color histogram by group",
 			"param_name": "color_histogram_by_group",
 			"description": "Color histogram by group instead of sample",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vT2iFfJpDl7gSm0v",
@@ -246,10 +255,13 @@
 			"name": "Set histogram x-axis min/max",
 			"param_name": "set_min_max_for_x_axis_for_histogram",
 			"description": "Set min/max value for histogram x-axis",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vU3jGgKqEm8hTn1w",
@@ -308,10 +320,13 @@
 			"param_name": "plot_corr_matrix_heatmap",
 			"description": "Create a correlation matrix heatmap for sample similarity",
 			"help_text": "Set to FALSE for datasets with many samples to avoid long run times",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "wA9pMmQwKs4nZt7c",
@@ -320,10 +335,13 @@
 			"param_name": "interactive_plots",
 			"description": "Create interactive plots with plotly (PCA and histogram)",
 			"help_text": "Interactive plots allow hovering to view sample information, but correlation heatmap will not display",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		}
 	],
 	"results": [
