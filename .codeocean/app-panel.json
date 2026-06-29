@@ -253,7 +253,7 @@
 			"description": "Point size for the PCA plot",
 			"type": "text",
 			"value_type": "number",
-			"default_value": "8"
+			"default_value": "1"
 		},
 		{
 			"id": "vS1hEeIoCk6fRl9u",
