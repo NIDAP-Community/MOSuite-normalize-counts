@@ -24,16 +24,34 @@
 			"icon": "\ud83d\udcc2"
 		},
 		{
+			"id": "VisGeneral",
+			"name": "Visualization: General",
+			"description": "General visualization and plotting options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisPCA",
+			"name": "Visualization: PCA",
+			"description": "PCA plot options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisHistogram",
+			"name": "Visualization: Histogram",
+			"description": "Histogram plot options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisHeatmap",
+			"name": "Visualization: Heatmap",
+			"description": "Heatmap plot options",
+			"icon": "\ud83d\udcca"
+		},
+		{
 			"id": "XqgPq28Eo5VCFSZu",
 			"name": "Advanced",
 			"description": "Advanced parameters",
 			"icon": "\ud83d\udcc2"
-		},
-		{
-			"id": "uQ7pLsNmVtR2cX9b",
-			"name": "Visualization",
-			"description": "Visualization and plotting options",
-			"icon": "\ud83d\udcca"
 		}
 	],
 	"parameters": [
@@ -127,7 +145,7 @@
 		},
 		{
 			"id": "vG9vSsWcQy4tFz7i",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisGeneral",
 			"name": "Label column name",
 			"param_name": "label_colname",
 			"description": "Column from sample metadata containing labels for plots",
@@ -157,7 +175,7 @@
 		},
 		{
 			"id": "vJ2yVvZfTb7wIc0l",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisGeneral",
 			"name": "Colors for plots",
 			"param_name": "colors_for_plots",
 			"description": "Comma-separated list of colors for PCA and histogram",
@@ -167,7 +185,7 @@
 		},
 		{
 			"id": "vK3zWwAgUc8xJd1m",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Add labels to PCA",
 			"param_name": "add_label_to_pca",
 			"description": "Label points on the PCA plot",
@@ -181,7 +199,7 @@
 		},
 		{
 			"id": "vL4aXxBhVd9yKe2n",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "PCA component on x-axis",
 			"param_name": "principal_component_on_x_axis",
 			"description": "Principal component to plot on the x-axis",
@@ -191,7 +209,7 @@
 		},
 		{
 			"id": "vM5bYyCiWe0zLf3o",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "PCA component on y-axis",
 			"param_name": "principal_component_on_y_axis",
 			"description": "Principal component to plot on the y-axis",
@@ -201,7 +219,7 @@
 		},
 		{
 			"id": "vN6cZzDjXf1aMg4p",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Legend position for PCA",
 			"param_name": "legend_position_for_pca",
 			"description": "Legend position for the PCA plot",
@@ -217,7 +235,7 @@
 		},
 		{
 			"id": "vO7dAaEkYg2bNh5q",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label offset x",
 			"param_name": "label_offset_x_",
 			"description": "Label offset x for the PCA plot",
@@ -227,7 +245,7 @@
 		},
 		{
 			"id": "vP8eBbFlZh3cOi6r",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label offset y",
 			"param_name": "label_offset_y_",
 			"description": "Label offset y for the PCA plot",
@@ -237,7 +255,7 @@
 		},
 		{
 			"id": "vQ9fCcGmAi4dPj7s",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label font size",
 			"param_name": "label_font_size",
 			"description": "Label font size for the PCA plot",
@@ -247,7 +265,7 @@
 		},
 		{
 			"id": "vR0gDdHnBj5eQk8t",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Point size for PCA",
 			"param_name": "point_size_for_pca",
 			"description": "Point size for the PCA plot",
@@ -257,7 +275,7 @@
 		},
 		{
 			"id": "vS1hEeIoCk6fRl9u",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Color histogram by group",
 			"param_name": "color_histogram_by_group",
 			"description": "Color histogram by group instead of sample",
@@ -271,7 +289,7 @@
 		},
 		{
 			"id": "vT2iFfJpDl7gSm0v",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Set histogram x-axis min/max",
 			"param_name": "set_min_max_for_x_axis_for_histogram",
 			"description": "Set min/max value for histogram x-axis",
@@ -285,7 +303,7 @@
 		},
 		{
 			"id": "vU3jGgKqEm8hTn1w",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram x-axis minimum",
 			"param_name": "minimum_for_x_axis_for_histogram",
 			"description": "x-axis minimum for histogram plot",
@@ -295,7 +313,7 @@
 		},
 		{
 			"id": "vV4kHhLrFn9iUo2x",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram x-axis maximum",
 			"param_name": "maximum_for_x_axis_for_histogram",
 			"description": "x-axis maximum for histogram plot",
@@ -305,7 +323,7 @@
 		},
 		{
 			"id": "vW5lIiMsGo0jVp3y",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Legend font size for histogram",
 			"param_name": "legend_font_size_for_histogram",
 			"description": "Legend font size for histogram plot",
@@ -315,7 +333,7 @@
 		},
 		{
 			"id": "vX6mJjNtHp1kWq4z",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Legend position for histogram",
 			"param_name": "legend_position_for_histogram",
 			"description": "Legend position for histogram plot",
@@ -331,7 +349,7 @@
 		},
 		{
 			"id": "vY7nKkOuIq2lXr5a",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram legend columns",
 			"param_name": "number_of_histogram_legend_columns",
 			"description": "Number of columns for the histogram legend",
@@ -341,7 +359,7 @@
 		},
 		{
 			"id": "vZ8oLlPvJr3mYs6b",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisGeneral",
 			"name": "Plot correlation heatmap",
 			"param_name": "plot_corr_matrix_heatmap",
 			"description": "Create a correlation matrix heatmap for sample similarity",
@@ -356,7 +374,7 @@
 		},
 		{
 			"id": "wA9pMmQwKs4nZt7c",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisGeneral",
 			"name": "Interactive plots",
 			"param_name": "interactive_plots",
 			"description": "Create interactive plots with plotly (PCA and histogram)",
