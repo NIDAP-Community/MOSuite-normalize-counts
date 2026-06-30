@@ -24,12 +24,6 @@
 			"icon": "\ud83d\udcc2"
 		},
 		{
-			"id": "XqgPq28Eo5VCFSZu",
-			"name": "Advanced",
-			"description": "Advanced parameters",
-			"icon": "\ud83d\udcc2"
-		},
-		{
 			"id": "VisGeneral",
 			"name": "Visualization: General",
 			"description": "General visualization and plotting options",
@@ -52,6 +46,12 @@
 			"name": "Visualization: Heatmap",
 			"description": "Heatmap plot options",
 			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "XqgPq28Eo5VCFSZu",
+			"name": "Advanced",
+			"description": "Advanced parameters",
+			"icon": "\ud83d\udcc2"
 		}
 	],
 	"parameters": [
