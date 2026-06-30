@@ -107,7 +107,7 @@ parser$add_argument(
 parser$add_argument(
   "--point_size_for_pca",
   type = "double",
-  default = 8,
+  default = 1,
   help = "Point size for PCA plot"
 )
 parser$add_argument(

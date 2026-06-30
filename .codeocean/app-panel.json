@@ -16,46 +16,59 @@
 			"id": "gDLmTU36PrmD13RK",
 			"name": "Input Data Parameters",
 			"description": "Options for defining input data",
-			"icon": "📁"
+			"icon": "\ud83d\udcc1"
 		},
 		{
 			"id": "gn9FXwemlVazWQIo",
 			"name": "Basic",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
+		},
+		{
+			"id": "VisGeneral",
+			"name": "Visualization: General",
+			"description": "General visualization and plotting options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisPCA",
+			"name": "Visualization: PCA",
+			"description": "PCA plot options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisHistogram",
+			"name": "Visualization: Histogram",
+			"description": "Histogram plot options",
+			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "VisHeatmap",
+			"name": "Visualization: Heatmap",
+			"description": "Heatmap plot options",
+			"icon": "\ud83d\udcca"
 		},
 		{
 			"id": "XqgPq28Eo5VCFSZu",
 			"name": "Advanced",
 			"description": "Advanced parameters",
-			"icon": "📂"
-		},
-		{
-			"id": "uQ7pLsNmVtR2cX9b",
-			"name": "Visualization",
-			"description": "Visualization and plotting options",
-			"icon": "📊"
+			"icon": "\ud83d\udcc2"
 		}
 	],
 	"parameters": [
 		{
 			"id": "UA4GuIpVAxdcmHAG",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "gn9FXwemlVazWQIo",
 			"name": "Count type",
 			"param_name": "count_type",
 			"description": "Type of counts to normalize. Must be a count type in names(moo@counts)",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "filt"
-		},
-		{
-			"id": "vA3pMmQwKs8nZx1c",
-			"category": "gn9FXwemlVazWQIo",
-			"name": "Normalization type",
-			"param_name": "norm_type",
-			"description": "Normalization type (default: voom)",
-			"type": "text",
-			"value_type": "string",
-			"default_value": "voom"
+			"default_value": "filt",
+			"extra_data": [
+				"raw",
+				"clean",
+				"filt"
+			]
 		},
 		{
 			"id": "vB4qNnRxLt9oAy2d",
@@ -73,10 +86,26 @@
 			"name": "Input already log2",
 			"param_name": "input_in_log_counts",
 			"description": "Set TRUE if counts are already log2-transformed",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
+		},
+		{
+			"id": "vA3pMmQwKs8nZx1c",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Normalization type",
+			"param_name": "norm_type",
+			"description": "Normalization type (default: voom)",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "voom",
+			"extra_data": [
+				"voom"
+			]
 		},
 		{
 			"id": "vD6sPpTzNv1qCw4f",
@@ -84,9 +113,15 @@
 			"name": "Voom normalization method",
 			"param_name": "voom_normalization_method",
 			"description": "Normalization method for limma::voom",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "quantile"
+			"default_value": "quantile",
+			"extra_data": [
+				"none",
+				"scale",
+				"quantile",
+				"cyclicloess"
+			]
 		},
 		{
 			"id": "vE7tQqUaOw2rDx5g",
@@ -110,7 +145,7 @@
 		},
 		{
 			"id": "vG9vSsWcQy4tFz7i",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisGeneral",
 			"name": "Label column name",
 			"param_name": "label_colname",
 			"description": "Column from sample metadata containing labels for plots",
@@ -130,7 +165,7 @@
 		},
 		{
 			"id": "vI1xUuYeSa6vHb9k",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisPCA",
 			"name": "Samples to rename",
 			"param_name": "samples_to_rename",
 			"description": "Sample renaming pairs: old_name:new_name",
@@ -140,7 +175,7 @@
 		},
 		{
 			"id": "vJ2yVvZfTb7wIc0l",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisGeneral",
 			"name": "Colors for plots",
 			"param_name": "colors_for_plots",
 			"description": "Comma-separated list of colors for PCA and histogram",
@@ -150,18 +185,21 @@
 		},
 		{
 			"id": "vK3zWwAgUc8xJd1m",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Add labels to PCA",
 			"param_name": "add_label_to_pca",
 			"description": "Label points on the PCA plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vL4aXxBhVd9yKe2n",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "PCA component on x-axis",
 			"param_name": "principal_component_on_x_axis",
 			"description": "Principal component to plot on the x-axis",
@@ -171,7 +209,7 @@
 		},
 		{
 			"id": "vM5bYyCiWe0zLf3o",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "PCA component on y-axis",
 			"param_name": "principal_component_on_y_axis",
 			"description": "Principal component to plot on the y-axis",
@@ -181,17 +219,23 @@
 		},
 		{
 			"id": "vN6cZzDjXf1aMg4p",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Legend position for PCA",
 			"param_name": "legend_position_for_pca",
 			"description": "Legend position for the PCA plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "top"
+			"default_value": "top",
+			"extra_data": [
+				"top",
+				"bottom",
+				"left",
+				"right"
+			]
 		},
 		{
 			"id": "vO7dAaEkYg2bNh5q",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label offset x",
 			"param_name": "label_offset_x_",
 			"description": "Label offset x for the PCA plot",
@@ -201,7 +245,7 @@
 		},
 		{
 			"id": "vP8eBbFlZh3cOi6r",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label offset y",
 			"param_name": "label_offset_y_",
 			"description": "Label offset y for the PCA plot",
@@ -211,7 +255,7 @@
 		},
 		{
 			"id": "vQ9fCcGmAi4dPj7s",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Label font size",
 			"param_name": "label_font_size",
 			"description": "Label font size for the PCA plot",
@@ -221,39 +265,45 @@
 		},
 		{
 			"id": "vR0gDdHnBj5eQk8t",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisPCA",
 			"name": "Point size for PCA",
 			"param_name": "point_size_for_pca",
 			"description": "Point size for the PCA plot",
 			"type": "text",
 			"value_type": "number",
-			"default_value": "8"
+			"default_value": "1"
 		},
 		{
 			"id": "vS1hEeIoCk6fRl9u",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Color histogram by group",
 			"param_name": "color_histogram_by_group",
 			"description": "Color histogram by group instead of sample",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vT2iFfJpDl7gSm0v",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Set histogram x-axis min/max",
 			"param_name": "set_min_max_for_x_axis_for_histogram",
 			"description": "Set min/max value for histogram x-axis",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "vU3jGgKqEm8hTn1w",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram x-axis minimum",
 			"param_name": "minimum_for_x_axis_for_histogram",
 			"description": "x-axis minimum for histogram plot",
@@ -263,7 +313,7 @@
 		},
 		{
 			"id": "vV4kHhLrFn9iUo2x",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram x-axis maximum",
 			"param_name": "maximum_for_x_axis_for_histogram",
 			"description": "x-axis maximum for histogram plot",
@@ -273,7 +323,7 @@
 		},
 		{
 			"id": "vW5lIiMsGo0jVp3y",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Legend font size for histogram",
 			"param_name": "legend_font_size_for_histogram",
 			"description": "Legend font size for histogram plot",
@@ -283,17 +333,23 @@
 		},
 		{
 			"id": "vX6mJjNtHp1kWq4z",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Legend position for histogram",
 			"param_name": "legend_position_for_histogram",
 			"description": "Legend position for histogram plot",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "top"
+			"default_value": "top",
+			"extra_data": [
+				"top",
+				"bottom",
+				"left",
+				"right"
+			]
 		},
 		{
 			"id": "vY7nKkOuIq2lXr5a",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisHistogram",
 			"name": "Histogram legend columns",
 			"param_name": "number_of_histogram_legend_columns",
 			"description": "Number of columns for the histogram legend",
@@ -303,27 +359,33 @@
 		},
 		{
 			"id": "vZ8oLlPvJr3mYs6b",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisGeneral",
 			"name": "Plot correlation heatmap",
 			"param_name": "plot_corr_matrix_heatmap",
 			"description": "Create a correlation matrix heatmap for sample similarity",
 			"help_text": "Set to FALSE for datasets with many samples to avoid long run times",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "wA9pMmQwKs4nZt7c",
-			"category": "uQ7pLsNmVtR2cX9b",
+			"category": "VisGeneral",
 			"name": "Interactive plots",
 			"param_name": "interactive_plots",
 			"description": "Create interactive plots with plotly (PCA and histogram)",
 			"help_text": "Interactive plots allow hovering to view sample information, but correlation heatmap will not display",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
 			"default_value": "FALSE",
-			"pattern": "TRUE|FALSE|T|F"
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		}
 	],
 	"results": [
