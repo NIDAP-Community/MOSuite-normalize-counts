@@ -71,19 +71,6 @@
 			]
 		},
 		{
-			"id": "vA3pMmQwKs8nZx1c",
-			"category": "gn9FXwemlVazWQIo",
-			"name": "Normalization type",
-			"param_name": "norm_type",
-			"description": "Normalization type (default: voom)",
-			"type": "list",
-			"value_type": "string",
-			"default_value": "voom",
-			"extra_data": [
-				"voom"
-			]
-		},
-		{
 			"id": "vB4qNnRxLt9oAy2d",
 			"category": "gn9FXwemlVazWQIo",
 			"name": "Group column name",
@@ -105,6 +92,19 @@
 			"extra_data": [
 				"TRUE",
 				"FALSE"
+			]
+		},
+		{
+			"id": "vA3pMmQwKs8nZx1c",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Normalization type",
+			"param_name": "norm_type",
+			"description": "Normalization type (default: voom)",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "voom",
+			"extra_data": [
+				"voom"
 			]
 		},
 		{
