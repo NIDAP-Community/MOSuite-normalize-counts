@@ -2,6 +2,7 @@
 
 ## Development version
 
+- Install MOSuite from the `FigOutSync` package branch during capsule setup so the capsule uses the updated figure-standardization behavior before the next release image is available.
 - Align plot color defaults with MOSuite package defaults.
 - Leave the histogram legend font size blank by default so MOSuite can scale long or numerous legend labels automatically.
 

@@ -147,3 +147,22 @@ test_that("code/run executes with custom CLI arguments", {
     info = "Output should have norm counts in moo@counts"
   )
 })
+
+test_that("capsule environment installs MOSuite from FigOutSync", {
+  repo_root <- normalizePath(file.path(dirname(getwd()), ".."))
+  post_install <- file.path(repo_root, "environment", "postInstall")
+  post_install_lines <- readLines(post_install, warn = FALSE)
+
+  expect_true(
+    any(grepl("CCBR/MOSuite", post_install_lines, fixed = TRUE)),
+    info = "postInstall should install MOSuite from the package repository"
+  )
+  expect_true(
+    any(grepl("ref = \"FigOutSync\"", post_install_lines, fixed = TRUE)),
+    info = "postInstall should use the FigOutSync package branch"
+  )
+  expect_false(
+    any(grepl("ref = \"main\"", post_install_lines, fixed = TRUE)),
+    info = "postInstall should not install MOSuite from main for this capsule PR"
+  )
+})
