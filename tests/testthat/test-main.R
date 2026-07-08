@@ -147,5 +147,3 @@ test_that("code/run executes with custom CLI arguments", {
     info = "Output should have norm counts in moo@counts"
   )
 })
-
-
