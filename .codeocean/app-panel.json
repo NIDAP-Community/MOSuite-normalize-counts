@@ -71,6 +71,19 @@
 			]
 		},
 		{
+			"id": "vA3pMmQwKs8nZx1c",
+			"category": "gn9FXwemlVazWQIo",
+			"name": "Normalization type",
+			"param_name": "norm_type",
+			"description": "Normalization type (default: voom)",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "voom",
+			"extra_data": [
+				"voom"
+			]
+		},
+		{
 			"id": "vB4qNnRxLt9oAy2d",
 			"category": "gn9FXwemlVazWQIo",
 			"name": "Group column name",
@@ -92,19 +105,6 @@
 			"extra_data": [
 				"TRUE",
 				"FALSE"
-			]
-		},
-		{
-			"id": "vA3pMmQwKs8nZx1c",
-			"category": "gn9FXwemlVazWQIo",
-			"name": "Normalization type",
-			"param_name": "norm_type",
-			"description": "Normalization type (default: voom)",
-			"type": "list",
-			"value_type": "string",
-			"default_value": "voom",
-			"extra_data": [
-				"voom"
 			]
 		},
 		{
@@ -178,10 +178,11 @@
 			"category": "VisGeneral",
 			"name": "Colors for plots",
 			"param_name": "colors_for_plots",
-			"description": "Comma-separated list of colors for PCA and histogram",
-			"help_text": "Use color names or hex codes. Leave blank to use defaults",
+			"description": "Comma-separated colors for PCA and histogram. Defaults to the MOSuite palette.",
+			"help_text": "Use color names or hex codes. Supplied colors are used first; if there are more groups than colors, additional colors are generated from the MOSuite palette, with random colors only if that palette is too short.",
 			"type": "text",
-			"value_type": "string"
+			"value_type": "string",
+			"default_value": "#5954d6,#e1562c,#b80058,#00c6f8,#d163e6,#00a76c,#ff9287,#008cf9,#006e00,#796880,#FFA500,#878500"
 		},
 		{
 			"id": "vK3zWwAgUc8xJd1m",
@@ -271,7 +272,7 @@
 			"description": "Point size for the PCA plot",
 			"type": "text",
 			"value_type": "number",
-			"default_value": "1"
+			"default_value": "3"
 		},
 		{
 			"id": "vS1hEeIoCk6fRl9u",
@@ -326,10 +327,10 @@
 			"category": "VisHistogram",
 			"name": "Legend font size for histogram",
 			"param_name": "legend_font_size_for_histogram",
-			"description": "Legend font size for histogram plot",
+			"description": "Legend font size for histogram plot. Leave blank to scale automatically.",
 			"type": "text",
 			"value_type": "number",
-			"default_value": "10"
+			"default_value": ""
 		},
 		{
 			"id": "vX6mJjNtHp1kWq4z",
