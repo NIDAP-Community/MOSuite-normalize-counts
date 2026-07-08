@@ -165,7 +165,7 @@
 		},
 		{
 			"id": "vI1xUuYeSa6vHb9k",
-			"category": "XqgPq28Eo5VCFSZu",
+			"category": "VisPCA",
 			"name": "Samples to rename",
 			"param_name": "samples_to_rename",
 			"description": "Sample renaming pairs: old_name:new_name",
