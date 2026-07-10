@@ -1,5 +1,11 @@
 # Code Ocean capsule - MOSuite - normalize counts
 
+## Development version
+
+- Align plot color defaults with MOSuite package defaults (#4, @phoman14).
+- Leave the histogram legend font size blank by default so MOSuite can scale long or numerous legend labels automatically (#4, @phoman14).
+- Improve the Code Ocean app panel parameter selection and categories. (#3, @phoman14)
+
 ## v3.0
 
 - Use the MOSuite v0.3.0 docker image.
