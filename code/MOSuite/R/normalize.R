@@ -164,21 +164,6 @@ normalize_counts <- function(
       number_of_legend_columns = number_of_histogram_legend_columns
     ) +
       ggplot2::labs(caption = "normalized counts")
-    print_or_save_plot(
-      pca_plot,
-      filename = file.path(plots_subdir, "pca.png"),
-      print_plots = print_plots,
-      save_plots = save_plots,
-      width = 7,
-      height = 7,
-      units = "in"
-    )
-    print_or_save_plot(
-      hist_plot,
-      filename = file.path(plots_subdir, "histogram.png"),
-      print_plots = print_plots,
-      save_plots = save_plots
-    )
     if (isTRUE(plot_corr_matrix_heatmap)) {
       corHM_plot <- plot_corr_heatmap(
         df.filt,
@@ -197,6 +182,22 @@ normalize_counts <- function(
         caption = "normalized counts"
       )
     }
+
+    print_or_save_plot(
+      pca_plot,
+      filename = file.path(plots_subdir, "pca.png"),
+      print_plots = print_plots,
+      save_plots = save_plots,
+      width = 7,
+      height = 7,
+      units = "in"
+    )
+    print_or_save_plot(
+      hist_plot,
+      filename = file.path(plots_subdir, "histogram.png"),
+      print_plots = print_plots,
+      save_plots = save_plots
+    )
   }
 
   message(paste(
