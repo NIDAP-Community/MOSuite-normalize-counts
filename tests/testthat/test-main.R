@@ -1,3 +1,17 @@
+patch_main_load_path <- function(main_copy, repo_root) {
+  main_lines <- readLines(main_copy)
+  main_lines <- gsub(
+    'devtools::load_all("/code/MOSuite")',
+    sprintf(
+      'devtools::load_all("%s")',
+      file.path(repo_root, "code", "MOSuite")
+    ),
+    main_lines,
+    fixed = TRUE
+  )
+  writeLines(main_lines, main_copy)
+}
+
 test_that("code/run executes successfully with default CLI arguments", {
   # Create temporary workspace
   workspace <- tempfile("mosuite_normalize_counts_test_")
@@ -27,6 +41,7 @@ test_that("code/run executes successfully with default CLI arguments", {
     file.path(repo_root, "code", "main.R"),
     file.path(code_dir, "main.R")
   )
+  patch_main_load_path(file.path(code_dir, "main.R"), repo_root)
   file.copy(
     file.path(repo_root, "code", "run"),
     file.path(code_dir, "run")
@@ -97,6 +112,7 @@ test_that("code/run executes with custom CLI arguments", {
     file.path(repo_root, "code", "main.R"),
     file.path(code_dir, "main.R")
   )
+  patch_main_load_path(file.path(code_dir, "main.R"), repo_root)
   file.copy(
     file.path(repo_root, "code", "run"),
     file.path(code_dir, "run")
@@ -115,7 +131,6 @@ test_that("code/run executes with custom CLI arguments", {
       "--count_type=filt",
       "--norm_type=voom",
       "--voom_normalization_method=none",
-      "--add_label_to_pca=FALSE",
       "--principal_component_on_x_axis=1",
       "--principal_component_on_y_axis=3",
       "--plot_corr_matrix_heatmap=FALSE",
