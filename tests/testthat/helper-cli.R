@@ -34,18 +34,18 @@ setup_cli_workspace <- function(prefix = "mosuite_normalize_counts_test_") {
     overwrite = TRUE
   )
 
-  # Patch main.R to make MOSuite available outside the container.
-  # Replace library(MOSuite) with devtools::load_all() pointing to the repo checkout.
+  # Patch the hardcoded /code/MOSuite path so it works outside CodeOcean.
   main_copy <- file.path(code_dir, "main.R")
   main_lines <- readLines(main_copy)
   mosuite_path <- file.path(repo_root, "code", "MOSuite")
   main_lines <- gsub(
-    "^library\\(MOSuite\\)$",
+    'devtools::load_all("/code/MOSuite")',
     sprintf(
       "devtools::load_all('%s')",
       mosuite_path
     ),
-    main_lines
+    main_lines,
+    fixed = TRUE
   )
   writeLines(main_lines, main_copy)
 
