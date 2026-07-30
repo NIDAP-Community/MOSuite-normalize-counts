@@ -12,7 +12,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
 if ! command -v podman >/dev/null 2>&1; then
-  echo "Error: podman is not installed or not on PATH. Install it with 'brew install podman'." >&2
+  echo "Error: podman is not installed or not on PATH. Follow installation instructions at https://podman.io/" >&2
   exit 1
 fi
 
