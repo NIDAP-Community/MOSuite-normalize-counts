@@ -17,13 +17,13 @@ test_that("code/run executes successfully with default CLI arguments", {
   on.exit(unlink(setup$workspace, recursive = TRUE), add = TRUE)
 
   file.copy(
-    file.path(repo_root, "code", "main.R"),
-    file.path(code_dir, "main.R")
+    file.path(setup$repo_root, "code", "main.R"),
+    file.path(setup$code_dir, "main.R")
   )
-  patch_main_load_path(file.path(code_dir, "main.R"), repo_root)
+  patch_main_load_path(file.path(setup$code_dir, "main.R"), setup$repo_root)
   file.copy(
-    file.path(repo_root, "code", "run"),
-    file.path(code_dir, "run")
+    file.path(setup$repo_root, "code", "run"),
+    file.path(setup$code_dir, "run")
   )
 
   old_wd <- getwd()
@@ -41,13 +41,13 @@ test_that("code/run executes with custom CLI arguments", {
   on.exit(unlink(setup$workspace, recursive = TRUE), add = TRUE)
 
   file.copy(
-    file.path(repo_root, "code", "main.R"),
-    file.path(code_dir, "main.R")
+    file.path(setup$repo_root, "code", "main.R"),
+    file.path(setup$code_dir, "main.R")
   )
-  patch_main_load_path(file.path(code_dir, "main.R"), repo_root)
+  patch_main_load_path(file.path(setup$code_dir, "main.R"), setup$repo_root)
   file.copy(
-    file.path(repo_root, "code", "run"),
-    file.path(code_dir, "run")
+    file.path(setup$repo_root, "code", "run"),
+    file.path(setup$code_dir, "run")
   )
 
   old_wd <- getwd()
