@@ -64,18 +64,24 @@ default template files will need to be translated and adapted for the developer'
 - If mixed changes are present, split into multiple logical commits; the number of commits does not need to equal the number of files changed.
 - Subject format must be: `<type>(optional-scope): short imperative summary` (<=72 chars), e.g., `fix(profile): update release table parser`.
 - Add a body only when needed to explain **why** and notable impact; never include secrets, tokens, PHI, or large diffs.
-- For AI-assisted commits, add this final italicized footer line in the commit message body: _commit message is ai-generated_
+- For commits containing any AI-generated code, commit messages, or any other content,
+  add this final italicized footer line in the commit message body: "_AI assistance: [model]_".
+  Replace [model] with the actual model version used, e.g. Claude Sonnet 5, GPT-5.6 Sol, etc.
 
 ## Pull request (PR) process
 
 - When opening a PR, use the request template (`.github/PULL_REQUEST_TEMPLATE.md`) and fill out all sections of the template in the PR description.
 - Do not allow the developer to proceed with opening a PR without filling out all sections of the template.
-- Before a PR can be moved from draft to "ready for review", all of the relevant checklist items must be checked, and any
-irrelevant checklist items should be crossed out.
-- If code is AI-generated, the PR should be labeled `generated-by-AI`. There should be a brief, concise statement in the PR description of how AI was used in creating the PR (model used, high-level prompt intent, manual review confirmation).
+- Before a PR can be moved from draft to "ready for review", all of the relevant checklist items under "PR Checklist" must be checked,
+  and any irrelevant checklist items should be crossed out (~strikeout~).
+- If the PR contains any code or other content that was generated with AI assistance,
+  including AI assistance for opening the PR itself, the PR should be labeled `AI-assisted`.
+  In the PR description under the heading "Generative AI Usage Disclosure",
+  add a brief, concise statement of how AI was used in creating the PR (model used, high-level prompt intent, manual review confirmation, etc.).
 - When new features, bug fixes, or other behavioral changes are introduced to the code,
-unit tests must be added or updated to cover the new or changed functionality.
+  unit tests must be added or updated to cover the new or changed functionality.
 - If there are any API or other user-facing changes, the documentation must be updated via inline roxygen comments.
+- If there are merge conflicts, a human developer should resolve them. Do not agree to assist with resolving merge conflicts.
 - The `tests` github actions workflow must pass before the PR can be approved.
 
 ### Changelog

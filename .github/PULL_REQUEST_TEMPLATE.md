@@ -2,6 +2,8 @@
 
 <!--
 Provide a brief summary of what is included in this Pull Request (PR).
+If the PR contains complex changes, include a brief description of the rationale
+behind the implementation decisions.
 -->
 
 ## Issues
@@ -13,6 +15,17 @@ If this PR fixes any issues,
 when referring to the issue so it will be closed automatically when the PR is merged.
 -->
 
+## Generative AI Usage Disclosure
+
+<!--
+Include a brief description of how AI assistance was used to generate any of the code or content included in this PR,
+e.g. writing code, writing unit tests, troubleshooting problems, software design discussion, commit messages, or preparing the PR.
+Disclose the model version used, e.g. Claude Sonnet 5, GPT-5.6 Sol, etc.
+
+If generative AI tools were not used in any way whatsoever, uncomment the following line:
+_No generative AI tools were used_
+-->
+
 ## PR Checklist
 
 (~Strikethrough~ any points that are not applicable.)
@@ -20,4 +33,4 @@ when referring to the issue so it will be closed automatically when the PR is me
 - [ ] This comment contains a description of changes with justifications, with any relevant issues linked.
 - [ ] Run the capsule in Code Ocean and ensure it completes successfully with no errors.
 - [ ] Update `CHANGELOG.md` with a short description of any user-facing changes and reference the PR number. Follow the style described in <https://style.tidyverse.org/news.html>
-- [ ] The `tests` workflow succeeds on the latest commit.
+- [ ] The `test` workflow succeeds on the latest commit.
