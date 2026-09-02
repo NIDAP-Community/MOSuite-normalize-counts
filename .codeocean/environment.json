@@ -1,29 +1,9 @@
 {
 	"version": 1,
-	"base_image": "codeocean/mosuite-minimal:v0.5.0-alpha",
+	"base_image": "codeocean/mosuite-minimal:v0.5.0",
 	"options": {
 		"registry_host_arg": true,
 		"git_ask_pass": true,
 		"mount_secrets": true
-	},
-	"installers": {
-		"rcran": {
-			"packages": [
-				{
-					"name": "remotes",
-					"version": "2.5.0"
-				}
-			],
-			"install_remotes": true,
-			"use_rcache": true
-		},
-		"rgithub": {
-			"packages": [
-				{
-					"name": "CCBR/MOObject",
-					"version": "0c296b88c69e408d8f5e70c93af5878ec167db9a"
-				}
-			]
-		}
 	}
 }
