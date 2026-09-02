@@ -2,6 +2,7 @@
 
 ## Development version
 
+- Use MOSuite v0.5.0. (#14, @kelly-sovacool)
 - Sync Code Ocean app panel parameter descriptions with MOSuite package documentation for MOSuite v0.4.1 (#10, @phoman14).
 - Align plot color defaults with MOSuite package defaults (#4, @phoman14).
 - Leave the histogram legend font size blank by default so MOSuite can scale long or numerous legend labels automatically (#4, @phoman14).
@@ -17,7 +18,7 @@
 - Use MOSuite v0.2.1-dev docker image.
 - Standardize parameters across other MOSuite capsules.
 
-<https://poc-nci.codeocean.io/capsule/1373453/tree/v2> 
+<https://poc-nci.codeocean.io/capsule/1373453/tree/v2>
 
 ## v1.0
 
