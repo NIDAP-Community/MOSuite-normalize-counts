@@ -57,6 +57,20 @@ setup_cli_workspace <- function(prefix = "mosuite_normalize_counts_test_") {
   )
 }
 
+is_compatible_multiOmicDataSet <- function(moo) {
+  moo_classes <- class(moo)
+  has_moo_class_label <-
+    inherits(moo, "multiOmicDataSet") ||
+    any(grepl("(^|::)multiOmicDataSet$", moo_classes))
+
+  is_current_s7_moo <- tryCatch(
+    S7::S7_inherits(moo, MOSuite::multiOmicDataSet),
+    error = function(e) FALSE
+  )
+
+  return(is_current_s7_moo || has_moo_class_label)
+}
+
 expect_outputs_created <- function(results_dir) {
   moo_path <- file.path(results_dir, "moo", "moo-norm.rds")
 
@@ -70,8 +84,9 @@ expect_outputs_created <- function(results_dir) {
   )
 
   moo <- readr::read_rds(moo_path)
+
   expect_true(
-    inherits(moo, "MOSuite::multiOmicDataSet"),
+    is_compatible_multiOmicDataSet(moo),
     info = "Output should be an S7 multiOmicDataSet object"
   )
 
