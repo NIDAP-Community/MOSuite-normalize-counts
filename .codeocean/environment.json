@@ -5,5 +5,15 @@
 		"registry_host_arg": true,
 		"git_ask_pass": true,
 		"mount_secrets": true
+	},
+	"installers": {
+		"rgithub": {
+			"packages": [
+				{
+					"name": "MOObject",
+					"version": "main"
+				}
+			]
+		}
 	}
 }
