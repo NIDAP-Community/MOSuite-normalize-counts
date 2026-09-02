@@ -7,11 +7,21 @@
 		"mount_secrets": true
 	},
 	"installers": {
+		"rcran": {
+			"packages": [
+				{
+					"name": "remotes",
+					"version": "2.5.0"
+				}
+			],
+			"install_remotes": true,
+			"use_rcache": true
+		},
 		"rgithub": {
 			"packages": [
 				{
-					"name": "MOObject",
-					"version": "main"
+					"name": "CCBR/MOObject",
+					"version": "0c296b88c69e408d8f5e70c93af5878ec167db9a"
 				}
 			]
 		}
