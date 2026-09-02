@@ -5,8 +5,8 @@
   "sources": {
     "code/MOSuite": {
       "repo_url": "https://github.com/CCBR/MOSuite",
-      "ref": "backward-compat-moobject",
-      "git_sha": "a671d345b6041f083610b21419c6a7d286365545"
+      "ref": "v0.5.0",
+      "git_sha": "a1b6f5091131dbe25023969342ee7abb573bb01a"
     }
   }
 }
