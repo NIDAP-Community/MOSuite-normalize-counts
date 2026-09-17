@@ -1,6 +1,6 @@
 # Code Ocean capsule - MOSuite - normalize counts
 
-## Development version
+## v4.0
 
 - Use MOSuite v0.5.0. (#14, @kelly-sovacool)
 - Sync Code Ocean app panel parameter descriptions with MOSuite package documentation for MOSuite v0.4.1 (#10, @phoman14).
