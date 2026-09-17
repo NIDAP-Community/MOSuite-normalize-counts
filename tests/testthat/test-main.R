@@ -146,7 +146,7 @@ test_that("code/run accepts plotting CLI arguments", {
 
   moo <- readr::read_rds(file.path(results_dir, "moo", "moo-norm.rds"))
   expect_true(
-    S7::S7_inherits(moo, MOSuite::multiOmicDataSet),
+    is_compatible_multiOmicDataSet(moo),
     info = "Output should be an S7 multiOmicDataSet object"
   )
   expect_true(
